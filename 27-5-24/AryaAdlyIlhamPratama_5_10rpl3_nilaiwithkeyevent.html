@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Menambahkan judul untuk halaman HTML -->
 	<title>Menghitung Indeks Prestasi</title>
 	<style>
 		table {
@@ -18,6 +19,7 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
 </head>
 <body class="w-full flex flex-col justify-center items-center font-mono">
+     <!-- Menambahkan heading utama -->
 	<h1 class="my-5 mt-20 text-2xl">Menghitung Indeks Prestasi</h1>
 	<h1 id="notify" class="my-5 px-2 text-sm text-gray-800 bg-red-300 rounded-md hidden"></h1>
 	<h1 id="credit" class="my-2 px-2 text-sm text-gray-800 bg-green-300 rounded-md hidden"></h1>
@@ -40,6 +42,7 @@
 		<tr>
 			<td>UTS</td>
 			<td>30%</td>
+			<!-- onekeyup Untuk menangani event keyup-->
 			<td><input onkeyup="calculate()" class="w-full px-2 rounded-md" min="0" max="100" type="number" name="uts" id="uts" placeholder="masukkan nilai"></td>
 		</tr>
 		<tr>
@@ -63,10 +66,10 @@
             <td colspan="3"><button onclick="reset()" class="w-full transition border-none outline-none hover:bg-gray-500 hover:text-white rounded-md">Reset</button></td>
         </tr>
 	</table>
-
+<!-- Menambahkan script JavaScript -->
 	<script>
 
-        var credit = "Candra";
+        var credit = "Arya";
         var creditBool = false;
 
         function reset() {
@@ -168,7 +171,7 @@
                 ),
 
                 // update table
-                document.getElementById("nilai-akhir").textContent = (nilaiAkhir*10/10).toString().slice(0, 5),
+                document.getElementById("nilai-akhir").textContent = nilaiAkhir*10/10,
                 document.getElementById("indeks-presentasi").textContent = indeksPrestasi,
                 document.getElementById("keterangan").textContent = keterangan
             );
